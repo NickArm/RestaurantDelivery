@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/** Admin Auth Routes */
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('admin/login', [AdminAuthController::class, 'index'])->name('admin.login');
+    Route::get('admin/forget-password', [AdminAuthController::class, 'forgetPassword'])->name('admin.forget-password');
+});
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 
