@@ -16,6 +16,31 @@ namespace App\Models{
  * 
  *
  * @property int $id
+ * @property string $name
+ * @property string $slug
+ * @property int $status
+ * @property int $show_at_home
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereShowAtHome($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
+ */
+	class Category extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
  * @property string|null $key
  * @property string|null $value
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -111,6 +136,7 @@ namespace App\Models{
  * @property int $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\WhyChooseUsFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|WhyChooseUs newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|WhyChooseUs newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|WhyChooseUs query()
