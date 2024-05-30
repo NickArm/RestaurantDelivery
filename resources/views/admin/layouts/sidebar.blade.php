@@ -252,6 +252,9 @@
             <li><a class="nav-link" href="{{ route('admin.slider.index') }}"><i class="far fa-square"></i>
                     <span>Slider</span></a></li>
 
+            <li><a class="nav-link" href="{{ route('admin.why-choose-us.index') }}"><i class="far fa-square"></i>
+                    <span>Why Choose Us</span></a></li>
+
 
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
