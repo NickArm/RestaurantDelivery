@@ -24,7 +24,15 @@ class ProductDataTable extends DataTable
                 $edit = "<a href='".route('admin.product.edit', $query->id)."' class='btn btn-primary'><i class='fas fa-edit'></i></a>";
                 $delete = "<a href='".route('admin.product.destroy', $query->id)."' class='btn btn-danger delete-item mx-2'><i class='fas fa-trash'></i></a>";
 
-                return $edit.$delete;
+                $more = '<div class="btn-group dropleft">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></button>
+                <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-2px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="'.route('admin.product-gallery.show-index', $query->id).'">Product Gallery</a>
+                  <a class="dropdown-item" href="#">Product Variants</a>
+                </div>
+              </div>';
+
+                return $edit.$delete.$more;
             })
             ->addColumn('price', function ($query) {
                 return '$'.$query->price;
