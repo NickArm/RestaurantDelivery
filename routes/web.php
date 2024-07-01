@@ -35,6 +35,15 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 
+/** Product page Route*/
+Route::get('/products', [FrontendController::class, 'products'])->name('product.index');
+
+/** Show Product details page */
+Route::get('/product/{slug}', [FrontendController::class, 'showProduct'])->name('product.show');
+
+/** Product Modal Route */
+Route::get('/load-product-modal/{productId}', [FrontendController::class, 'loadProductModal'])->name('load-product-modal');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
