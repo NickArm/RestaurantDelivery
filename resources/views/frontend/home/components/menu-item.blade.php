@@ -61,12 +61,12 @@
                                 <a class="title"
                                     href="{{ route('product.show', $product->slug) }}">{{ $product->name }}</a>
                                 <h5 class="price">
-                                    {{-- @if ($product->offer_price > 0)
+                                    @if ($product->offer_price > 0)
                                         {{ currencyPosition($product->offer_price) }}
                                         <del>{{ currencyPosition($product->price) }}</del>
                                     @else
                                         {{ currencyPosition($product->price) }}
-                                    @endif --}}
+                                    @endif
                                 </h5>
                                 <ul class="d-flex flex-wrap justify-content-center">
                                     <li><a href="javascript:;" onclick="loadProductModal('{{ $product->id }}')"><i

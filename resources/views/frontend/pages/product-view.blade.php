@@ -2,8 +2,8 @@
 
 @section('content')
     <!--=============================
-                                                                            BREADCRUMB START
-                                                                        ==============================-->
+                                                                                                BREADCRUMB START
+                                                                                            ==============================-->
     <section class="fp__breadcrumb" style="background: url({{ asset(config('settings.breadcrumb')) }});">
         <div class="fp__breadcrumb_overlay">
             <div class="container">
@@ -18,13 +18,13 @@
         </div>
     </section>
     <!--=============================
-                                                                            BREADCRUMB END
-                                                                        ==============================-->
+                                                                                                BREADCRUMB END
+                                                                                            ==============================-->
 
 
     <!--=============================
-                                                                            MENU DETAILS START
-                                                                        ==============================-->
+                                                                                                MENU DETAILS START
+                                                                                            ==============================-->
     <section class="fp__menu_details mt_115 xs_mt_85 mb_95 xs_mb_65">
         <div class="container">
             <div class="row">
@@ -64,12 +64,12 @@
                             </p>
                         @endif
                         <h3 class="price">
-                            {{-- @if ($product->offer_price > 0)
+                            @if ($product->offer_price > 0)
                                 {{ currencyPosition($product->offer_price) }}
                                 <del>{{ currencyPosition($product->price) }}</del>
                             @else
                                 {{ currencyPosition($product->price) }}
-                            @endif --}}
+                            @endif
                         </h3>
                         <p class="short_description">{!! $product->short_description !!}</p>
 
@@ -89,8 +89,8 @@
                                                 name="product_size" id="size-{{ $productSize->id }}"
                                                 data-price="{{ $productSize->price }}" value="{{ $productSize->id }}">
                                             <label class="form-check-label" for="size-{{ $productSize->id }}">
-                                                {{-- {{ $productSize->name }} <span>+
-                                                    {{ currencyPosition($productSize->price) }}</span> --}}
+                                                {{ $productSize->name }} <span>+
+                                                    {{ currencyPosition($productSize->price) }}</span>
                                             </label>
                                         </div>
                                     @endforeach
@@ -108,8 +108,8 @@
                                                 id="option-{{ $productOption->id }}"
                                                 data-price="{{ $productOption->price }}">
                                             <label class="form-check-label" for="option-{{ $productOption->id }}">
-                                                {{-- {{ $productOption->name }} <span>+
-                                                    {{ currencyPosition($productOption->price) }}</span> --}}
+                                                {{ $productOption->name }} <span>+
+                                                    {{ currencyPosition($productOption->price) }}</span>
                                             </label>
                                         </div>
                                     @endforeach
@@ -126,7 +126,7 @@
                                         <button class="btn btn-success v_increment"><i class="fal fa-plus"></i></button>
                                     </div>
                                     <h3 id="v_total_price">
-                                        {{-- {{ $product->offer_price > 0 ? currencyPosition($product->offer_price) : currencyPosition($product->price) }} --}}
+                                        {{ $product->offer_price > 0 ? currencyPosition($product->offer_price) : currencyPosition($product->price) }}
                                     </h3>
                                 </div>
                             </div>
@@ -280,12 +280,12 @@
                                         <a class="title"
                                             href="{{ route('product.show', $relatedProduct->slug) }}">{!! $relatedProduct->name !!}</a>
                                         <h5 class="price">
-                                            {{-- @if ($relatedProduct->offer_price > 0)
+                                            @if ($relatedProduct->offer_price > 0)
                                                 {{ currencyPosition($relatedProduct->offer_price) }}
                                                 <del>{{ currencyPosition($relatedProduct->price) }}</del>
                                             @else
                                                 {{ currencyPosition($relatedProduct->price) }}
-                                            @endif --}}
+                                            @endif
                                         </h5>
                                         <ul class="d-flex flex-wrap justify-content-center">
                                             <li><a href="javascript:;"
